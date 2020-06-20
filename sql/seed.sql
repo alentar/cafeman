@@ -1,3 +1,5 @@
+use `cafeman`;
+
 INSERT INTO
     `chefs` (`Id`, `FirstName`, `LastName`, `Salary`)
 VALUES
@@ -5,7 +7,8 @@ VALUES
     (NULL, 'Cat', 'Buff', '100'),
     (NULL, 'Harry', 'Potter', '1000'),
     (NULL, 'James', 'Potter', '999'),
-    (NULL, 'Jane', 'Carter', '555')
+    (NULL, 'Jane', 'Carter', '555');
+
 INSERT INTO
     `customers` (`Id`, `FirstName`, `LastName`, `Mobile`)
 VALUES
@@ -13,7 +16,8 @@ VALUES
     (NULL, 'Kasun', 'Bandara', '071232345678'),
     (NULL, 'Chamara', 'Ekanayaka', '0772345678'),
     (NULL, 'Lex', 'Carter', '0442345678'),
-    (NULL, 'Kathy', 'Cane', '0223345678')
+    (NULL, 'Kathy', 'Cane', '0223345678');
+
 INSERT INTO
     `meals` (`Id`, `Name`, `Price`, `Description`)
 VALUES
@@ -30,7 +34,8 @@ VALUES
         'String Hoppers',
         '450',
         '20 String Hoppers with sambol and dhal curry'
-    )
+    );
+
 INSERT INTO
     `tables` (`Id`, `Number`, `Capacity`)
 VALUES
@@ -38,14 +43,16 @@ VALUES
     (NULL, '2', '1'),
     (NULL, '3', '5'),
     (NULL, '4', '3'),
-    (NULL, '5', '10')
+    (NULL, '5', '10');
+
 INSERT INTO
     `waiters` (`Id`, `FirstName`, `LastName`, `Salary`)
 VALUES
     (NULL, 'Lily', 'Potter', '100'),
     (NULL, 'Duddly', 'Garry', '50'),
     (NULL, 'Karl', 'Obama', '123'),
-    (NULL, 'Dilon', 'Silva', '100')
+    (NULL, 'Dilon', 'Silva', '100');
+
 INSERT INTO
     `table_reservations` (
         `Id`,
@@ -110,7 +117,8 @@ VALUES
         '5',
         '2020-06-01 18:51:27',
         '2020-06-01 20:51:27'
-    )
+    );
+
 INSERT INTO
     `orders` (
         `Id`,
@@ -176,7 +184,8 @@ VALUES
         'served',
         '2020-06-01 18:51:27',
         '2'
-    )
+    );
+
 INSERT INTO
     `meal_orders` (`OrderId`, `MealId`)
 VALUES
@@ -193,13 +202,15 @@ VALUES
     ('6', '2'),
     ('6', '3'),
     ('6', '4'),
-    ('7', '2')
+    ('7', '2');
+
 INSERT INTO
     `order_serves` (`OrderId`, `WaiterId`, `ServedAt`)
 VALUES
     ('5', '1', '2020-06-01 19:22:35'),
     ('6', '2', '2020-06-18 19:22:35'),
-    ('7', '3', '2020-06-08 19:23:34')
+    ('7', '3', '2020-06-08 19:23:34');
+
 INSERT INTO
     `order_prepares` (`OrderId`, `ChefId`, `StartTime`, `EndTime`)
 VALUES
@@ -224,4 +235,4 @@ VALUES
         '4',
         '2020-06-12 19:30:22',
         '2020-06-12 20:30:22'
-    )
+    );
