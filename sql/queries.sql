@@ -63,6 +63,24 @@ INNER JOIN customers ON customers.Id = orders.CustomerId
 WHERE
     orders.status = "preparing"
 
+--  Queed Orders view
+CREATE VIEW queued_orders AS SELECT
+    orders.Id AS Order_ID,
+    orders.Price AS Order_Price,
+    orders.CreatedAt AS Order_Created_At,
+    chefs.Id AS Chef_Id,
+    chefs.FirstName AS Chef_Fname,
+    chefs.LastName AS Chef_Lname,
+    customers.Id AS Customer_Id,
+    customers.FirstName AS Customer_Fname,
+    customers.Mobile AS Customer_Mobile
+FROM
+    orders
+INNER JOIN order_prepares ON order_prepares.OrderId = orders.Id
+INNER JOIN chefs ON chefs.Id = order_prepares.ChefId
+INNER JOIN customers ON customers.Id = orders.CustomerId
+WHERE
+    orders.status = "queued"
 
 --  FIND ALL TABLE RESERVATIONS OF CUSTOMERS BY CUSTOMER MOBILE
 SELECT
