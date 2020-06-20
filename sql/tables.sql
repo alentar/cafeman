@@ -56,14 +56,13 @@ CREATE TABLE `orders` (
     Quantity INTEGER,
     Status VARCHAR(10),
     CreatedAt DATETIME,
-    Description VARCHAR(225),
     CustomerId INTEGER,
     FOREIGN KEY(CustomerId) REFERENCES customers(Id)
 );
 
-DROP TABLE IF EXISTS `customer_reservations`;
+DROP TABLE IF EXISTS `table_reservations`;
 
-CREATE TABLE `customer_reservations` (
+CREATE TABLE `table_reservations` (
     Id INTEGER AUTO_INCREMENT PRIMARY KEY,
     CustomerId INTEGER,
     TableId INTEGER,
